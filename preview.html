@@ -1,0 +1,316 @@
+<title>Kollege Klub</title>
+<meta name="description" content="Live sessions and one-to-one coaching from students currently at Berkeley, Michigan and UIUC, alongside expert admission counselors.">
+<meta name="theme-color" content="#2EB4DF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!--
+  TYPOGRAPHY CONTRACT — read before editing type.
+  Bricolage Grotesque is the only family on this page. It is variable:
+  opsz 12..96, wdth 75..100, wght 200..800. Hierarchy comes from those axes:
+  the hero is condensed and heavy (wdth 78, wght 680), body is full width and
+  light. Never add Inter, Roboto, Open Sans, Lato, Montserrat, Poppins, DM
+  Sans, Manrope, Space Grotesk, Plus Jakarta Sans, Arial, Helvetica, Cormorant
+  Garamond, Newsreader, or IBM Plex Mono. Letter-spacing is size-specific.
+  Full rationale in DESIGN.md.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="Kollege Klub" width="420" height="83" decoding="async">
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#board">The board</a>
+      <a href="#plan">Four-year plan</a>
+      <a href="#sessions">Sessions</a>
+      <a href="#mentors">Mentors</a>
+      <a href="#register">Register</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ─────────────────────────── hero ─────────────────────────── -->
+  <section class="hero" id="top">
+    <div class="wrap hero__in">
+      <h1 class="hero__title" data-split="hero">The people who got in, telling you exactly how.</h1>
+      <div class="hero__aside">
+        <p class="hero__sub">
+          Live sessions and one-to-one coaching from students currently at
+          Berkeley, Michigan and UIUC, with admission counselors who do this for
+          a living. Course load, APs, activities, essays. The whole four years,
+          in order.
+        </p>
+        <a class="btn" href="#register" data-magnet>Register for a session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── the board ─────────────────────────── -->
+  <!--
+    DATA NOTE: these rows describe where the mentors themselves were admitted,
+    which is the claim the business actually makes. Replace with verified
+    mentor records before launch. Do not present them as client outcomes.
+  -->
+  <section class="sec" id="board">
+    <div class="wrap">
+      <header class="sec__head">
+        <h2 class="h-sec" data-split>The board</h2>
+        <p class="sec__note" data-reveal>
+          Where every mentor on this page was admitted, and what they went to
+          study. No crests, no stock photo of a library. Gold means admitted.
+        </p>
+      </header>
+
+      <table class="ledger" data-reveal-each>
+        <thead>
+          <tr><th scope="col">Year</th><th scope="col">University</th><th scope="col">Programme</th><th scope="col" class="ta-r">Outcome</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2025</td><td><button class="ledger__open" type="button">University of California, Berkeley</button></td><td>Electrical Engineering &amp; Computer Science</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2025</td><td><button class="ledger__open" type="button">University of Michigan</button></td><td>Computer Science</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2025</td><td><button class="ledger__open" type="button">University of Illinois Urbana-Champaign</button></td><td>Computer Engineering</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2024</td><td><button class="ledger__open" type="button">Stanford University</button></td><td>Biology</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2024</td><td><button class="ledger__open" type="button">Harvard University</button></td><td>Biology</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2024</td><td><button class="ledger__open" type="button">UC San Diego</button></td><td>Bioengineering</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2024</td><td><button class="ledger__open" type="button">New York University</button></td><td>Business (Stern)</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2023</td><td><button class="ledger__open" type="button">University of Texas at Austin</button></td><td>Business (McCombs)</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2023</td><td><button class="ledger__open" type="button">Georgia Institute of Technology</button></td><td>Industrial Engineering</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+          <tr><td>2023</td><td><button class="ledger__open" type="button">Purdue University</button></td><td>Aeronautics &amp; Astronautics</td><td class="ta-r"><span class="admit">Admitted</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ─────────────────────── four-year plan (swipe) ─────────────────────── -->
+  <!--
+    Without JS every grade is an ordinary block in a column. fluid.js turns
+    the column into a horizontal track that follows the finger 1:1, projects
+    a flick to the grade it was heading for, and springs there.
+  -->
+  <section class="stage" id="plan" data-stage>
+    <div class="wrap stage__in">
+      <div class="stage__left">
+        <h2 class="h-sec">The four-year plan</h2>
+        <div class="grade" role="tablist" aria-label="Grade">
+          <button class="grade__n" type="button" role="tab" aria-current="true">9</button>
+          <button class="grade__n" type="button" role="tab">10</button>
+          <button class="grade__n" type="button" role="tab">11</button>
+          <button class="grade__n" type="button" role="tab">12</button>
+        </div>
+        <div class="pin__bar" aria-hidden="true"><i></i></div>
+        <div class="swipe__nav">
+          <button class="swipe__btn" type="button" data-swipe-prev aria-label="Previous grade">&larr;</button>
+          <button class="swipe__btn" type="button" data-swipe-next aria-label="Next grade">&rarr;</button>
+          <span class="swipe__hint" aria-hidden="true">Swipe, drag, or use the arrow keys</span>
+        </div>
+        <p class="sr-only" data-swipe-live aria-live="polite"></p>
+      </div>
+
+      <div class="swipe__viewport" tabindex="0" role="group" aria-roledescription="carousel" aria-label="The four-year plan, one grade at a time">
+        <ol class="swipe__track" role="list">
+          <li class="step" data-grade="9">
+            <h3 class="h-md">Ninth grade: build the base</h3>
+            <p>Course selection is the decision that quietly sets the ceiling for everything after it. We map the math and science sequence backwards from the majors you might want, so junior year still has room in it.</p>
+          </li>
+          <li class="step" data-grade="10">
+            <h3 class="h-md">Tenth grade: go deep on two things</h3>
+            <p>Admissions readers are not counting activities, they are looking for evidence of a person. Two commitments with real depth beat nine with none. We pick them, then we build the summer around them.</p>
+          </li>
+          <li class="step" data-grade="11">
+            <h3 class="h-md">Eleventh grade: the year that decides it</h3>
+            <p>Hardest course load, testing plan, and the summer program or research placement that becomes the spine of your application. This is where a mentor who did it two years ago is worth more than advice from someone who did it twenty.</p>
+          </li>
+          <li class="step" data-grade="12">
+            <h3 class="h-md">Twelfth grade: write it down</h3>
+            <p>School list, essays, and the order you send them in. Line-by-line essay work with someone whose own essay worked, plus a counselor read before anything is submitted.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── sessions ─────────────────────────── -->
+  <!--
+    Honest state: nothing is scheduled. Do not fake a date. When a session is
+    booked, give the first row a real <time datetime="…"> and keep the
+    "is-next" class on it; past rows stay as they are.
+  -->
+  <section class="sec" id="sessions">
+    <div class="wrap">
+      <header class="sec__head">
+        <h2 class="h-sec" data-split>Sessions</h2>
+        <p class="sec__note" data-reveal>
+          Ninety minutes, live, capped small enough that you can actually ask
+          your question. Every session is recorded and goes into the archive,
+          and the price sits well under one-to-one private counseling. Ask for
+          the current rate.
+        </p>
+      </header>
+
+      <table class="ledger ledger--sched" data-reveal-each>
+        <thead>
+          <tr><th scope="col">Date</th><th scope="col">Session</th><th scope="col" class="ta-r">Seats</th></tr>
+        </thead>
+        <tbody>
+          <tr class="is-next">
+            <td>Date being confirmed</td>
+            <td>
+              <button class="ledger__open" type="button">Next cohort</button>
+              <form class="inline-form" id="notify" novalidate>
+                <label class="sr-only" for="notify-email">Email address</label>
+                <input id="notify-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@school.edu" required>
+                <button class="btn btn--sm" type="submit">Tell me the date</button>
+                <p class="form__msg" role="status" aria-live="polite"></p>
+              </form>
+            </td>
+            <td class="ta-r">Opening</td>
+          </tr>
+          <tr>
+            <td><time datetime="2025-05-15T18:30:00-07:00">15 May 2025</time></td>
+            <td><button class="ledger__open" type="button">How I got into Berkeley EECS, UMich and UIUC</button><span class="ledger__sub">Course selection, AP load, the two activities that mattered, and the essay that nearly did not get written.</span></td>
+            <td class="ta-r">Sold out</td>
+          </tr>
+          <tr>
+            <td>Archive</td>
+            <td><button class="ledger__open" type="button">Biology and pre-med: what the summer needs to be</button><span class="ledger__sub">Research placements, lab emails that get answered, and how a Stanford and a Harvard admit spent tenth-grade summer.</span></td>
+            <td class="ta-r">Recording</td>
+          </tr>
+          <tr>
+            <td>Archive</td>
+            <td><button class="ledger__open" type="button">Business direct-admit: Stern, McCombs and the rest</button><span class="ledger__sub">Why direct-admit business programmes read differently, and what they want to see by the end of eleventh grade.</span></td>
+            <td class="ta-r">Recording</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── mentors ─────────────────────────── -->
+  <!--
+    NAMES NOTE: real mentors get real names here. Until then the list carries
+    only what is true — the school and the programme.
+  -->
+  <section class="sec sec--alt" id="mentors">
+    <div class="wrap mentors">
+      <div class="mentors__copy">
+        <h2 class="h-sec" data-split>Mentors</h2>
+        <p class="sec__note" data-reveal>
+          Everyone who teaches here sat the same exams, wrote the same essays
+          and got the same emails, recently enough to remember the details.
+          They are paid for their time. If that is you, we are hiring.
+        </p>
+        <a class="btn btn--ghost" href="#register" data-magnet>Apply to mentor</a>
+      </div>
+      <dl class="masthead" data-reveal-each>
+        <div><dt>Berkeley</dt><dd>EECS, class of 2025</dd></div>
+        <div><dt>Michigan</dt><dd>Computer Science, class of 2025</dd></div>
+        <div><dt>UIUC</dt><dd>Computer Engineering, class of 2025</dd></div>
+        <div><dt>Stanford</dt><dd>Biology, class of 2024</dd></div>
+        <div><dt>Harvard</dt><dd>Biology, class of 2024</dd></div>
+        <div><dt>UC San Diego</dt><dd>Bioengineering, class of 2024</dd></div>
+        <div><dt>NYU</dt><dd>Stern, class of 2024</dd></div>
+        <div><dt>UT Austin</dt><dd>McCombs, class of 2023</dd></div>
+        <div><dt>Georgia Tech</dt><dd>Industrial Engineering, class of 2023</dd></div>
+        <div><dt>Purdue</dt><dd>Aeronautics &amp; Astronautics, class of 2023</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── register ─────────────────────────── -->
+  <section class="sec" id="register">
+    <div class="wrap register">
+      <div class="register__copy">
+        <h2 class="h-sec" data-split>Tell us where you are</h2>
+        <p class="sec__note" data-reveal>
+          Which grade, which direction you are leaning, what you are stuck on.
+          A real person reads this and replies, usually the same week. Or write
+          to <a href="mailto:info@kollegeklub.info">info@kollegeklub.info</a>.
+        </p>
+      </div>
+
+      <form class="form" id="contact" novalidate>
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-grade">Grade</label>
+          <select id="f-grade" name="grade" required>
+            <option value="">Select</option>
+            <option>Ninth</option><option>Tenth</option><option>Eleventh</option><option>Twelfth</option>
+            <option>Parent or guardian</option>
+            <option>I want to mentor</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-subject">Subject</label>
+          <input id="f-subject" name="subject" type="text" placeholder="Course selection for tenth grade">
+        </div>
+        <div class="field field--full">
+          <label for="f-msg">What are you stuck on?</label>
+          <textarea id="f-msg" name="message" rows="4"></textarea>
+        </div>
+        <div class="field field--full form__actions">
+          <button class="btn" type="submit" data-magnet>Send it</button>
+          <p class="form__msg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!--
+  The sheet. A native <dialog> for the top layer, inert background, Escape and
+  focus return; fluid.js supplies the spring, the drag, and the dismiss.
+-->
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet__panel">
+    <div class="sheet__grip" aria-hidden="true"><i></i></div>
+    <header class="sheet__head">
+      <p class="sheet__kicker"></p>
+      <h2 class="sheet__title" id="sheet-title"></h2>
+      <button class="sheet__close" type="button" aria-label="Close">&times;</button>
+    </header>
+    <div class="sheet__body"></div>
+    <footer class="sheet__foot">
+      <button class="btn sheet__action" type="button" hidden></button>
+    </footer>
+  </div>
+</dialog>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="brand brand--lg" href="#top">
+      <img src="logo.png" alt="Kollege Klub, back to top" width="420" height="83" loading="lazy" decoding="async">
+    </a>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="#board">The board</a>
+      <a href="#plan">Four-year plan</a>
+      <a href="#sessions">Sessions</a>
+      <a href="#mentors">Mentors</a>
+      <a href="mailto:info@kollegeklub.info">info@kollegeklub.info</a>
+    </nav>
+    <p class="foot__fine">
+      © <span id="year">2026</span> Kollege Klub. Not affiliated with, endorsed by, or
+      representing any university named on this page.
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+<script src="main.js" defer></script>
+<script src="fluid.js" defer></script>
